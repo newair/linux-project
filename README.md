@@ -107,7 +107,7 @@
 * [Apache Docs](https://httpd.apache.org/docs/)
 * [Amazon Docs](https://aws.amazon.com/)
 * [Flask wsgi deployment Docs](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)
-* [Digitalocean References for ubuntu deployments](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an- ubuntu-vps)
+* [Digitalocean References for ubuntu deployments](https://goo.gl/3ua872)
 * [Python installing packegs](https://packaging.python.org/tutorials/installing-packages/)
 * [Pip user guide](https://pip.pypa.io/en/stable/user_guide/)
 * [Stackoverflow](https://stackoverflow.com/)
