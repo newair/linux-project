@@ -44,10 +44,10 @@
 * Werkzeug  0.12.2
 * git
 
-Changes Made
+## Changes Made
 
-Updating the software package of the server
-sudo apt-get update
+* Updating the software package of the server
+-sudo apt-get update
 
 Enable port 2200
 sudo vi /etc/ssh/sshd_config 
