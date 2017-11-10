@@ -4,9 +4,9 @@
 
 ## Basic details 
 
-*Ip Address: http://54.255.179.30
-*SSH Port: 2200
-*Complete URL: http://54.255.179.30
+* Ip Address: http://54.255.179.30
+* SSH Port: 2200
+* Complete URL: http://54.255.179.30
 
 ## Summary of the software installed
 
