@@ -49,67 +49,66 @@
 * Updating the software package of the server
 	* sudo apt-get update
 
-Enable port 2200
-sudo vi /etc/ssh/sshd_config 
-and change ssh port to 2200
+* Enable port 2200
+	* sudo vi /etc/ssh/sshd_config and change ssh port to 2200
 
-Allow the port from firewall
-sudo ufw allow 2200/tcp
+* Allow the port from firewall
+	* sudo ufw allow 2200/tcp
 
-Disallow incomming requests
-sudo ufw default deny incoming
+* Disallow incomming requests
+	* sudo ufw default deny incoming
 
-Allow outgoing requests
-sudo ufw default allow outgoing
+* Allow outgoing requests
+	* sudo ufw default allow outgoing
 
-Create a user Grader and grant sudo access
-sudo cp /etc/sudoers.d/90-cloud-init-users /etc/sudoers.d/grader
+* Create a user Grader and grant sudo access
+	* sudo cp /etc/sudoers.d/90-cloud-init-users /etc/sudoers.d/grader
 
-Creating Key pair for grader User and save public key
-mkdir .ssh
-touch .ssh/authorized_keys
-nano .ssh/authorized_keys
- chmod 700 .ssh
-chmod 644 .ssh/authorized_keys
+* Creating Key pair for grader User and save public key
+	* mkdir .ssh
+	* touch .ssh/authorized_keys
 
-Change time zone of the server
-tzselect
+* nano .ssh/authorized_keys
+	* chmod 700 .ssh
+	* chmod 644 .ssh/authorized_keys
 
-Install Apache 2
-sudo apt-get install apache2
+* Change time zone of the server
+	* tzselect
 
-Install Apache 2 WSGI
-sudo apt-get install libapache2-mod-wsgi
+* Install Apache 2
+	* sudo apt-get install apache2
 
-Install git and checkout Item-category project
-sudo apt-get install git
+* Install Apache 2 WSGI
+	* sudo apt-get install libapache2-mod-wsgi
 
-Creating a virtual host file 
-/etc/apache2/sites-available/market-item-category.conf
+* Install git and checkout Item-category project
+	* sudo apt-get install git
 
-Adding the Application specific details to the file
+* Creating a virtual host file 
+	* /etc/apache2/sites-available/market-item-category.conf
 
-Installing pythin pip (package management system)
-pip install -U pip setuptools
+* Adding the Application specific details to the file
 
-Install all the dependencies with pip
-pip install -r requirements.txt
+* Installing pythin pip (package management system)
+	* pip install -U pip setuptools
 
-created the market-item-category.wsgi and inserted the relevant imports
+* Install all the dependencies with pip
+	* pip install -r requirements.txt
 
-changed the code to read the files from the app-root path.
+* created the market-item-category.wsgi and inserted the relevant imports
 
-used scoped_session(sessionmaker(bind=engine)) in order to prevent 
- ProgrammingError: SQLite objects created in a thread can only be used in that same thread
+* changed the code to read the files from the app-root path.
+
+* used scoped_session(sessionmaker(bind=engine)) in order to prevent ``` ProgrammingError: SQLite objects created in a thread can only be used 	  in that same thread ```
 
 
-list of third-party resources
+## list of third-party resources
 
-https://httpd.apache.org/docs/
-https://aws.amazon.com/ docs
-http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/
-https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
-https://packaging.python.org/tutorials/installing-packages/
-https://pip.pypa.io/en/stable/user_guide/
-https://stackoverflow.com/
+* [Apache Docs](https://httpd.apache.org/docs/)
+* [Amazon Docs](https://aws.amazon.com/)
+* [Flask wsgi deployment Docs](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)
+* [Digitalocean References for ubuntu deployments](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an- ubuntu-vps)
+* [Python installing packegs](https://packaging.python.org/tutorials/installing-packages/)
+* [Pip user guide](https://pip.pypa.io/en/stable/user_guide/)
+* [Stackoverflow](https://stackoverflow.com/)
 
