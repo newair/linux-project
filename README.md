@@ -43,6 +43,7 @@
 * webencodings  0.5.1
 * Werkzeug  0.12.2
 * git
+* Postgres 9.5.9
 
 ## Changes Made
 
@@ -99,7 +100,18 @@
 
 * changed the code to read the files from the app-root path.
 
-* used scoped_session(sessionmaker(bind=engine)) in order to prevent ``` ProgrammingError: SQLite objects created in a thread can only be used 	  in that same thread ```
+* Install PostgresSQL
+	* sudo apt-get install postgresql postgresql-contrib
+
+* Creating db new user called catalog and use default user/ db mapping
+
+* Adding a password for new user
+
+* Changing the db_setup.py configuration in order to point new parameters
+
+* Changing user permisions
+
+* Restart apache 
 
 
 ## list of third-party resources
